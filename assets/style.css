@@ -351,7 +351,15 @@ body > nav.container > ul > li:nth-child(n):hover> a {
 
 .small-img-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    max-width: 1px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.small-img-group .small-img-col img {
+    width: 80px;
+    border-radius: 10px;
+    margin: 0 1px;
 }
 .small-img-col {
     cursor: pointer;
