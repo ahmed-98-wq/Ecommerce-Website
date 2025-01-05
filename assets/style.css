@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --fr-color: rgb(246, 235, 20);
+    --se-color: #1d1d1d;
+    --th-color: #7652b6;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Poppins", serif;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--se-color);
+}
+h6 {
+    color: #D8D8D8;
+}
+
+/* Global  Start */
+button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: var(--se-color);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+}
+button:hover ,
+button.active {
+    color: var(--se-color);
+    background-color:rgb(236, 242, 242);
+    transition: 0.3s ease;
+}
+hr {
+    width: 80px;
+    height: 3px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--fr-color);
+    margin: auto;
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+.star {
+    padding: 10px 0;
+}
+.star i {
+    color: gold;
+}
+/* Global End */
+
+.container .logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--fr-color);
+}
+.container .logo:hover {
+    color: #fff;
+}
+.container img {
+    width: 100px;
+}
+.navbar {
+    background-color:rgba(0,0,0,.4);
+    backdrop-filter: blur(6px);
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: #fff;
+    transition: .3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar i.active {
+    color:var(--fr-color)
+}
+.navbar i {
+    font-size: 1rem;
+    color: #aea8a8;
+    padding: 0px 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#bar {
+    font-size: 1.5rem;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--fr-color);
+}
+#bar:hover {
+    color: var(--se-color);
+}
+/* Mobile Navbar Start */
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+body>nav>div>button:hover #bar {
+    color: var(--se-color);
+}
+@media only screen and (max-width:990px) {
+    .navbar i {
+    font-size: 1rem;
+    color: #aea8a8;
+    padding: 25px 10px  10px ;
+    }
+#navbarSupportedContent > ul {
+    margin: 2rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-items: center;
+    }
+#navbarSupportedContent>ul>li:nth-child(n) > a {
+    padding: 12px 0;
+    }
+}
+/* Mobile Navbar End */
+
+#home {
+    background-image:url("/img/back1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: top -50px center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#home span {
+    color: var(--fr-color);
+}
+#new-box .one img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#new-box .one .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: .3s ease;
+}
+#new-box .one:hover .details {
+    cursor: pointer;
+    background-color:rgba(118,82,182,0.7);
+}
+#new-box .one .details button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--se-color);
+    background-color: rgba(0,0,0,0);
+    border-bottom: 1px solid var(--se-color);
+    border-radius: 0;
+    padding: 2.2px;
+    transform: translatey(60px);
+    transition: .3s ease;
+}
+#new-box .one .details button:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+#new-box .one:nth-child(n) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+
+/* Products */
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.product img {
+    width: 200px;
+    transition: .3s all;
+}
+.product:hover img {
+    opacity: .6;
+}
+.product .buy-button {
+    background-color: var(--fr-color);
+    color: #1d1d1d;
+    transform: translatey(20px);
+    opacity: 0;
+    transition: .3s all;
+}
+.product .buy-button:focus {
+    outline: none;
+}
+.product:hover .buy-button {
+    transform: translatey(0px);
+    opacity: 1;
+}
+#banner {
+    background-image:url("/img/banner/1.jpg");
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: top -80px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#banner h4 {
+    color: #fff;
+}
+#banner h1 {
+    color: #fff;
+}
+#banner button {
+    background-color: var(--fr-color);
+    color: var(--se-color);
+}
+#banner button:focus {
+    outline: none;
+}
+#banner button:hover {
+    background-color: #fff;
+    color: var(--sc-color);
+}
+/* footer */
+#footer {
+    background-color: #1d1d1d;
+}
+#footer .logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+/* #footer .logo:hover {
+    color: var(--fr-color);
+} */
+#footer h5 {
+    color: var(--fr-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#footer li {
+    padding-bottom: 5px;
+}
+#footer li a {
+    font-size: .8rem;
+    color: #aea8a8;
+    text-decoration: none;
+    list-style: none;
+}
+#footer li a:hover {
+    color: #fff;
+}
+#footer p {
+    color: #aea8a8;
+    font-size: 14px;
+}
+#footer .copyright a {
+    color: var(--fr-color);
+    font-size: 1.3rem;
+    padding: 0 10px;;
+}
+#footer .copyright a:hover {
+    color: #fff;
+}
+#footer .copyright a i:hover {
+    font-size: 1.4rem;
+    transition: .3s ease;
+}
+.product img {
+    width: 70%;
+    height: auto;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+.sc-up {
+    background-color: var(--fr-color);
+    border-radius: 100%;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    padding: 5px 12px;
+    margin-right: 2rem;
+}
+.sc-up i{
+    font-size: 30px;
+    color: #1d1d1d;
+}
+body > nav.container > ul > li.page-item.active > a {
+    background-color: var(--se-color);
+    color: #fff;
+    border: none;
+}
+
+body > nav.container > ul > li:nth-child(n):hover> a {
+    background-color: var(--fr-color);
+    color: #fff;
+}
+.pagination a {
+    color: #1d1d1d;
+}
+.page-link:focus {
+    box-shadow: none !important;
+    border-color: var(--fr-color) !important;
+}
+/* Product Details */
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col {
+    cursor: pointer;
+    margin-top: .6rem;
+}
+.product-details select {
+    display: block;
+    padding: 5px 10px;
+}
+.product-details input {
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+    margin-right: 10px;
+} 
+.product-details input:focus {
+    outline: none;
+} 
+.buy-btn {
+    background-color: var(--fr-color);
+    color: var(--se-color);
+}
+
+/* Scroll Animation Javascripting Start */
+
+.scroller {
+    max-width: 100%;
+    /* border: 1px solid greenyellow; */
+    margin: auto;
+}
+.scroller[data-animated=true] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+        90deg,
+        transparent, 
+        white 20%,
+        white 80%,
+        transparent);
+        mask: linear-gradient(
+            90deg,
+            transparent, 
+            white 20%,
+            white 80%,
+            transparent);
+}
+.scroller[data-animated=true] .scroller__inner {
+    width: fit-content;
+    flex-wrap: nowrap;
+    animation: scroll 
+    var(--_animation-duration, 30s)
+    var(--_animation-direction, forwards) 
+    linear infinite;
+}
+.scroller[data-direction="right"] {
+    --_animation-direction:reverse;
+}
+@keyframes scroll {
+    to {
+        transform: translate(-100%);
+    }
+}
+/* Scroll Animation Javascripting End */
